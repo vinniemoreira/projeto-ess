@@ -43,3 +43,10 @@ And os alunos “Vinicius Moreira” e “Maria Silva” não tem nota para o ro
 When “Importo notas de correção de roteiro”
 Then um erro ocorre
 And as notas não são armazenadas
+
+Scenario: Importação de alunos a partir de uma planilha como a de Nomes e Logins
+    Given estou logado como “Professor”
+    And estou na página “importar alunos de planilha”
+    When adiciono um arquivo “alunos.xlsx” que contém nomes e logins dos alunos a serem importados
+    And confirmo o envio da planilha
+    Then os alunos contidos na planilha são registrados na turma
