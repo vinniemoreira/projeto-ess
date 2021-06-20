@@ -29,4 +29,17 @@ cada especificação de cenário só será analisada uma vez, assim capriche na 
 Seguir rigorosamente as práticas sugeridas nos slides e livro, e o checklist associado
 
 
-asdasdas
+Scenario: Importação de notas a partir da correção de roteiro falha service
+Given estou logado como “Professor”
+And o sistema tem cadastrado o aluno “Vinicius Moreira”
+And o aluno “Vinicius Moreira” não fez o roteiro "Requirements"
+When  “Importo notas de correção de roteiro”
+Then o sistema não importa notas do aluno "Vinicius Moreira"
+
+Scenario: Importação de notas parcial a partir da correção de roteiro inexistente service
+Given estou logado como “Professor”
+And o roteiro "Requirements" não está armazenado no sistema
+And os alunos “Vinicius Moreira” e “Maria Silva” não tem nota para o roteiro "Requirements"
+When “Importo notas de correção de roteiro”
+Then um erro ocorre
+And as notas não são armazenadas
