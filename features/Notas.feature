@@ -27,3 +27,6 @@ Cada aluno, individualmente, pede feedback ao monitor alocado a sua equipe e ao 
 especificações de cenários com erros básicos não serão analisados
 cada especificação de cenário só será analisada uma vez, assim capriche na primeira versão
 Seguir rigorosamente as práticas sugeridas nos slides e livro, e o checklist associado
+
+
+asdasdas
