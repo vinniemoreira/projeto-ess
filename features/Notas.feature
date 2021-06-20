@@ -50,3 +50,11 @@ Scenario: Importação de alunos a partir de uma planilha como a de Nomes e Logi
     When adiciono um arquivo “alunos.xlsx” que contém nomes e logins dos alunos a serem importados
     And confirmo o envio da planilha
     Then os alunos contidos na planilha são registrados na turma
+
+Scenario:  Importação de notas
+    Given estou logado como “Professor” com o login “agsa” e senha “1234”
+    And estou na página “Notas dos Alunos”
+    And vejo o campo de “Notas” dos alunos vazio
+     When eu seleciono a opção “Importar Notas”
+    Then vejo uma mensagem de sucesso
+    And vejo o campo de “Notas” dos alunos preenchido
