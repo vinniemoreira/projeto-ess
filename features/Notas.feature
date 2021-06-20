@@ -43,3 +43,4 @@ And os alunos “Vinicius Moreira” e “Maria Silva” não tem nota para o ro
 When “Importo notas de correção de roteiro”
 Then um erro ocorre
 And as notas não são armazenadas
+And <Novo-passo-adicionado-roteiro>
