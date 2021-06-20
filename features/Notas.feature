@@ -59,3 +59,4 @@ Scenario:  Importação de notas
      When eu seleciono a opção “Importar Notas”
     Then vejo uma mensagem de sucesso
     And vejo o campo de “Notas” dos alunos preenchido
+    And "ajuste cenario roteiro"
